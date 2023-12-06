@@ -2,6 +2,7 @@
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
+    width: auto;
 }
 
 .logo-name, .nav-header {
@@ -27,7 +28,7 @@
     list-style: none;
     display: flex;
     justify-content: space-around; 
-    margin-left: 700px;
+    margin-left: 600px;
 }
 
 .nav-header li{
@@ -38,7 +39,7 @@
     text-decoration: none;
     color: rgb(49, 203, 234);
     font-weight: bold;
-    font-size: 24px; 
+    font-size: 18px; 
     padding: 8px 16px; 
     border-radius: 4px; 
     transition: background-color 0.3s ease; 
@@ -48,13 +49,25 @@
     background-color: #dddcdc;
 }
 
+.login{
+    color: rgb(69, 0, 196);
+    font-weight: bold;
+    font-size: 24px;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid rgb(69, 0,196);
+    margin-left: 20px;
+    height: fit-content;
+    background-color: white; 
+}
 .slider_container{
     display: flex;
 }
 
 .slider {
     position: relative;
-  }
+    width: 100%;
+}
   
   .image-with-text {
     position: relative;

@@ -36,7 +36,9 @@ function App() {
             <li><a href='#'>Home</a></li>
             <li><a href='#'>About US</a></li>
             <li><a href='#'>Services</a></li>
+            <li><a href='#'>Testimonial</a></li>
             <li><a href='#'>Contact US</a></li>
+            <button className='login'>Login</button>
           </ul>
         </div>
       <div className='slider_container'>
@@ -72,6 +74,7 @@ function App() {
               <li><a href='#'>Home</a></li>
               <li><a href='#'>About US</a></li>
               <li><a href='#'>Services</a></li>
+              <li><a href='#'>Testimonial</a></li>
               <li><a href='#'>Contact US</a></li>
             </ul>
           </div>
