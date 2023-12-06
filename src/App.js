@@ -9,6 +9,7 @@ import image4 from './img/park4.jpg';
 import leftarrow from './img/leftarrow.png';
 import rightarrow from './img/rightarrow.png';
 import Contact from './components/Contact';
+import Testimonial from './components/Testimonial';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -24,10 +25,13 @@ function App() {
       <>
         {/* Your home page content */}
         <button onClick={() => handleNavigation('contact')}>Go to Contact</button>
+        <button onClick={() => handleNavigation('testimonial')}>Go to Testimonial</button>
       </>
     );
   } else if (currentPage === 'contact') {
     currentContent = <Contact />;
+  } else if (currentPage === 'testimonial') {
+    currentContent = <Testimonial />;
   }
   const images = [image1, image2, image3, image4];
   const textContent = [
@@ -55,7 +59,7 @@ function App() {
           <li><a href='#'>Home</a></li>
           <li><a href='#'>About US</a></li>
           <li><a href='#'>Services</a></li>
-          <li><a href='#'>Testimonial</a></li>
+          <li><a href='#' onClick={() => handleNavigation('testimonial')}>Testimonial</a></li>
           <li><a href='#' onClick={() => handleNavigation('contact')}>Contact US</a></li>
           <button className='login'>Login</button>
         </ul>

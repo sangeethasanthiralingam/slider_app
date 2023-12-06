@@ -108,7 +108,7 @@ class Contact extends Component {
                         </div>
                         <div className="containerDivStyle">
                             <form className="formStyle" method="post">
-                                <label className="labelStyle" htmlFor="Name">
+                                <label className="labelStyle" htmlFor="Name" style={{}}>
                                     Name:
                                     <input
                                         type="text"
