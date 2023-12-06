@@ -8,8 +8,27 @@ import image3 from './img/park3.jpg';
 import image4 from './img/park4.jpg';
 import leftarrow from './img/leftarrow.png';
 import rightarrow from './img/rightarrow.png';
+import Contact from './components/Contact';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('home');
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page);
+  };
+
+  let currentContent = null;
+
+  if (currentPage === 'home') {
+    currentContent = (
+      <>
+        {/* Your home page content */}
+        <button onClick={() => handleNavigation('contact')}>Go to Contact</button>
+      </>
+    );
+  } else if (currentPage === 'contact') {
+    currentContent = <Contact />;
+  }
   const images = [image1, image2, image3, image4];
   const textContent = [
     'Welcome to Jet Park!',
@@ -30,17 +49,21 @@ function App() {
 
   return (
     <div className="container">
-        <div className='nav-bar'>
-          <h4 className='logo-name'>Jet Park</h4>
-          <ul className='nav-header'>
-            <li><a href='#'>Home</a></li>
-            <li><a href='#'>About US</a></li>
-            <li><a href='#'>Services</a></li>
-            <li><a href='#'>Testimonial</a></li>
-            <li><a href='#'>Contact US</a></li>
-            <button className='login'>Login</button>
-          </ul>
-        </div>
+      <div className='nav-bar'>
+        <h4 className='logo-name'>Jet Park</h4>
+        <ul className='nav-header'>
+          <li><a href='#'>Home</a></li>
+          <li><a href='#'>About US</a></li>
+          <li><a href='#'>Services</a></li>
+          <li><a href='#'>Testimonial</a></li>
+          <li><a href='#' onClick={() => handleNavigation('contact')}>Contact US</a></li>
+          <button className='login'>Login</button>
+        </ul>
+      </div>
+      {/* Render content based on currentPage */}
+      <div className='content'>
+        {currentContent}
+      </div>
       <div className='slider_container'>
         <div>
           <img
@@ -66,18 +89,18 @@ function App() {
         </div>
       </div>
       <div className='footer'>
-          <div className='footer-logo'>
-            <p className="copyright">© 2023 Jet Park. All rights reserved.</p>
-          </div>
-          <div className='footer-links'>
-            <ul>
-              <li><a href='#'>Home</a></li>
-              <li><a href='#'>About US</a></li>
-              <li><a href='#'>Services</a></li>
-              <li><a href='#'>Testimonial</a></li>
-              <li><a href='#'>Contact US</a></li>
-            </ul>
-          </div>
+        <div className='footer-logo'>
+          <p className="copyright">© 2023 Jet Park. All rights reserved.</p>
+        </div>
+        <div className='footer-links'>
+          <ul>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About US</a></li>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>Testimonial</a></li>
+            <li><a href='#'>Contact US</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   );
