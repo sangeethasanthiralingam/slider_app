@@ -1,23 +1,81 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './style/Style.css';
+import image1 from './img/park1.jpg';
+import image2 from './img/park2.jpg';
+import image3 from './img/park3.jpg';
+import image4 from './img/park4.jpg';
+import leftarrow from './img/leftarrow.png';
+import rightarrow from './img/rightarrow.png';
 
 function App() {
+  const images = [image1, image2, image3, image4];
+  const textContent = [
+    'Welcome to Jet Park!',
+    'Explore Amazing Features!',
+    'Discover Innovation!',
+    'Connect with Us for Services!',
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleLeftArrowClick = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const handleRightArrowClick = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+        <div className='nav-bar'>
+          <h4 className='logo-name'>Jet Park</h4>
+          <ul className='nav-header'>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About US</a></li>
+            <li><a href='#'>Services</a></li>
+            <li><a href='#'>Contact US</a></li>
+          </ul>
+        </div>
+      <div className='slider_container'>
+        <div>
+          <img
+            src={leftarrow}
+            alt='left-arrow'
+            className='left-arrow'
+            onClick={handleLeftArrowClick}
+          />
+        </div>
+        <div className='slider'>
+          <div className='image-with-text'>
+            <img src={images[currentImageIndex]} alt={`Slider ${currentImageIndex + 1}`} />
+            <h3 className='text-content'>{textContent[currentImageIndex]}</h3>
+          </div>
+        </div>
+        <div>
+          <img
+            src={rightarrow}
+            alt='right-arrow'
+            className='right-arrow'
+            onClick={handleRightArrowClick}
+          />
+        </div>
+      </div>
+      <div className='footer'>
+          <div className='footer-logo'>
+            <p className="copyright">© 2023 Jet Park. All rights reserved.</p>
+          </div>
+          <div className='footer-links'>
+            <ul>
+              <li><a href='#'>Home</a></li>
+              <li><a href='#'>About US</a></li>
+              <li><a href='#'>Services</a></li>
+              <li><a href='#'>Contact US</a></li>
+            </ul>
+          </div>
+      </div>
     </div>
   );
 }
