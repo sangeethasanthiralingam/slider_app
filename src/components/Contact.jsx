@@ -42,6 +42,8 @@ class Contact extends Component {
     };
     render() {
         return (
+            <div className="contact">
+            <h2 className="contact-heading">Contact&nbsp;Details</h2>
             <div className="contact-details">
                 <div className="contact-us-outer-div">
                     <div className="contact-us-inner-div">
@@ -147,6 +149,7 @@ class Contact extends Component {
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         );
     }
