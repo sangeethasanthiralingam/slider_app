@@ -2,6 +2,8 @@ import { Component } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 class Contact extends Component {
     constructor() {
@@ -43,6 +45,7 @@ class Contact extends Component {
     render() {
         return (
             <div className="contact">
+            <Navbar/>
             <h2 className="contact-heading">Contact&nbsp;Details</h2>
             <div className="contact-details">
                 <div className="contact-us-outer-div">
@@ -150,6 +153,7 @@ class Contact extends Component {
                     </div>
                 </div>
             </div>
+            <Footer/>
             </div>
         );
     }

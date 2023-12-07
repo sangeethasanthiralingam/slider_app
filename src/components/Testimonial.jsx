@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 class Testimonial extends Component {
     render() {
+
+        
         const testimonials = [
             {
                 id: 1,
@@ -58,6 +62,8 @@ class Testimonial extends Component {
 
 
         return (
+            <div>
+            <Navbar/>
             <div className="testimonial">
                 <h2>Customer Reviews</h2>
                 <div className="testimonial-list">
@@ -81,6 +87,8 @@ class Testimonial extends Component {
                     ))}
                 </div>
             </div >
+            <Footer/>
+            </div>
         );
     }
 }
