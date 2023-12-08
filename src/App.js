@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import './App.css';
 import './style/Style.css';
 import image1 from './img/park1.jpg';
@@ -38,6 +38,14 @@ function App() {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [currentImageIndex]);
+  
   return (
      <div className="container">
        
