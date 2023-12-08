@@ -1,138 +1,10 @@
-.container {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    padding: 0;
-    width: auto;
-}
-
-.logo-name,
-.nav-header {
-    margin: 0;
-}
-
-.logo-name {
-    font-size: 36px;
-    padding: 20px 20px 20px 30px;
-    color: crimson;
-}
-
-.nav-bar {
-    border: 1px solid aliceblue;
-    background-color: aliceblue;
-    width: 100%;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-}
-
-.nav-header {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 600px;
-}
-
-.nav-header li {
-    display: inline;
-}
-
-.nav-header a {
-    text-decoration: none;
-    color: rgb(49, 203, 234);
-    font-weight: bold;
-    font-size: 18px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-header a:hover {
-    background-color: #dddcdc;
-}
-
-.login {
-    color: rgb(69, 0, 196);
-    font-weight: bold;
-    font-size: 24px;
-    width: fit-content;
-    border-radius: 5px;
-    border: 1px solid rgb(69, 0, 196);
-    margin-left: 20px;
-    height: fit-content;
-    background-color: white;
-}
-
-.slider_container {
-    display: flex;
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-}
-
-.image-with-text {
-    position: relative;
-}
-
-.text-content {
-    position: absolute;
-    top: 90%;
-    left: 80%;
-    width: fit-content;
+.contact-heading{
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.921);
-    padding: 10px;
-    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #31c9a0;
 }
 
-.left-arrow {
-    width: 20px;
-    height: 20px;
-    padding: 350px 10px 0 10px;
-}
-
-.right-arrow {
-    width: 20px;
-    height: 20px;
-    padding: 350px 10px 0 10px;
-}
-
-img {
-    width: 100%;
-    height: 80vh;
-}
-
-.footer {
-    width: 100%;
-    height: 30px;
-}
-
-.copyright {
-    text-align: center;
-}
-
-.footer-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    float: center;
-}
-
-.footer-links li {
-    display: inline;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: rgb(20, 38, 41);
-    font-size: 18px;
-    padding: 6px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-/******************************************** conduct****************************************************************************** */
 .contact-details {
     margin: 0% 5% 5% 5%;
     border: #000 solid;
@@ -165,10 +37,12 @@ img {
 
 .h3-div {
     font-weight: 700;
-    color: #253237;
+    color: crimson;
     /* padding-right: 12px; */
-    margin: 0 0 0.05%;
+    margin: 0 0 17px;
     line-height: 1;
+    text-align: center;
+    font-size: 24px;
 }
 
 .phone-div {
@@ -195,15 +69,18 @@ img {
 .phone-icon-div .svg-inline--fa {
     width: 24px;
     height: 24px;
+    margin: 10px;
+    color: rgb(215, 145, 145);
 }
 
 .number p {
-    margin: 0;
+    margin: 10px;
 }
 
 .number a {
     text-decoration: none;
     color: #333;
+    font-size: 20px;
 }
 
 .number a:hover {
@@ -224,7 +101,7 @@ img {
 }
 
 .email-icon-div {
-    margin-right: 10px;
+    margin: 3%;
 }
 
 .email {
@@ -236,6 +113,8 @@ img {
 .email-icon-div .svg-inline--fa {
     width: 24px;
     height: 24px;
+    margin: 10px;
+    color: rgb(215, 145, 145);
 }
 
 .email p {
@@ -276,6 +155,8 @@ img {
 .location-icon-div .svg-inline--fa {
     width: 24px;
     height: 24px;
+    margin: 10px;
+    color: rgb(215, 145, 145);
 }
 
 .location p {
@@ -295,6 +176,8 @@ img {
 .social-icon-div {
     border: #000;
     margin: 3%;
+    text-align: center;
+    color: crimson;
 }
 
 .containerDivStyle {
@@ -421,18 +304,20 @@ img {
 /* Style for Testimonial Component */
 .testimonial {
     background-color: #f8f8f8;
-    padding: 1%;
+    /* padding: 1%; */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
     background-image: url('https://www.istockphoto.com/video/huge-storage-parking-lot-cars-lined-up-depot-of-new-cars-ready-to-be-distributed-gm1337644129-418422001');
     background-size: cover;
 }
 
 .testimonial h2 {
-    font-size: 28px;
-    color: #333;
+    font-size: 48px;
+    font-weight: bold;
+    color: #31c9a0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .testimonial-list {
@@ -452,6 +337,7 @@ img {
 
 .testimonial-card {
     width: 40%;
+    height: auto;
     background-color: #3e8cd8;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -460,7 +346,7 @@ img {
     text-align: center;
     flex: 0 0 auto;
     /* Allow cards to shrink to their content */
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* Adjust spacing between cards */
     white-space: nowrap;
     /* Prevent testimonials from wrapping */
@@ -472,6 +358,7 @@ img {
     margin-bottom: 10px;
     font-size: 30px;
     color: #555;
+    height: auto;
     white-space: pre-line;
     /* Preserve line breaks */
     max-width: 80%;
@@ -525,6 +412,7 @@ img {
     border-radius: 10px;
     background-color: #9df6f4;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
 }
 
 blockquote {
@@ -533,10 +421,11 @@ blockquote {
     border-radius: 8px;
     position: relative;
     background-color: rgb(227, 191, 191);
-    padding: 30px 50px 65px 50px;
+    /* padding: 30px 50px 65px 50px; */
+    padding: 10px 10px 10px 30px ;
     font-size: 0.8em;
     font-weight: 500;
-    margin: 0 0 -50px;
+    /* margin: 0 0 -50px; */
     line-height: 1.6em;
     box-shadow: 0 0 5px rgba(29, 245, 1, 0.15);
 }
