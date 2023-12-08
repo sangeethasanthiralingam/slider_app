@@ -52,12 +52,12 @@
 
 .login {
     color: rgb(255, 255, 255);
-    background-color: rgb(191, 160, 249);
+    background-color: rgb(78, 191, 163);
     font-weight: bold;
     font-size: 24px;
     width: fit-content;
     border-radius: 5px;
-    border: 1px solid rgb(191, 160, 249);
+    border: 1px solid rgb(78, 191, 163);
     margin-left: 20px;
     height: fit-content;
 }
