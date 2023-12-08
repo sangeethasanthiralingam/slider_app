@@ -10,6 +10,7 @@ import leftarrow from './img/leftarrow.png';
 import rightarrow from './img/rightarrow.png';
 import Contact from './components/Contact';
 import Testimonial from './components/Testimonial';
+import Service from './components/Services';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -24,14 +25,19 @@ function App() {
     currentContent = (
       <>
         {/* Your home page content */}
-        <button onClick={() => handleNavigation('contact')}>Go to Contact</button>
-        <button onClick={() => handleNavigation('testimonial')}>Go to Testimonial</button>
+        <button onClick={() => handleNavigation('contact')}className='hidden-button'>Go to Contact</button>
+        <button onClick={() => handleNavigation('testimonial')}className='hidden-button'>Go to Testimonial</button>
+        <button onClick={() => handleNavigation('services')}className='hidden-button'>Go to services</button>
+
       </>
     );
   } else if (currentPage === 'contact') {
     currentContent = <Contact />;
   } else if (currentPage === 'testimonial') {
     currentContent = <Testimonial />;
+  }
+  else if (currentPage === 'services') {
+    currentContent = <Service />;
   }
   const images = [image1, image2, image3, image4];
   const textContent = [
@@ -58,7 +64,7 @@ function App() {
         <ul className='nav-header'>
           <li><a href='#'>Home</a></li>
           <li><a href='#'>About US</a></li>
-          <li><a href='#'>Services</a></li>
+          <li><a href='#' onClick={() => handleNavigation('services')}>Services</a></li>
           <li><a href='#' onClick={() => handleNavigation('testimonial')}>Testimonial</a></li>
           <li><a href='#' onClick={() => handleNavigation('contact')}>Contact US</a></li>
           <button className='login'>Login</button>
@@ -100,9 +106,9 @@ function App() {
           <ul>
             <li><a href='#'>Home</a></li>
             <li><a href='#'>About US</a></li>
-            <li><a href='#'>Services</a></li>
-            <li><a href='#'>Testimonial</a></li>
-            <li><a href='#'>Contact US</a></li>
+            <li><a href='#' onClick={() => handleNavigation('services')}>Services</a></li>
+            <li><a href='#' onClick={() => handleNavigation('testimonial')}>Testimonial</a></li>
+          <li><a href='#' onClick={() => handleNavigation('contact')}>Contact US</a></li>
           </ul>
         </div>
       </div>
