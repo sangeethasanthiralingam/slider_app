@@ -65,7 +65,7 @@ class Testimonial extends Component {
             <div>
             <Navbar/>
             <div className="testimonial">
-                <h2>Customer Reviews</h2>
+                <h2>TESTIMONIAL</h2>
                 <div className="testimonial-list">
                     {testimonials.map((testimonial) => (
                         <div key={testimonial.id} className="testimonial-card">

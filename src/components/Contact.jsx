@@ -46,7 +46,7 @@ class Contact extends Component {
         return (
             <div className="contact">
             <Navbar/>
-            <h2 className="contact-heading">Contact&nbsp;Details</h2>
+            <h2 className="contact-heading">CONTACT&nbsp;US</h2>
             <div className="contact-details">
                 <div className="contact-us-outer-div">
                     <div className="contact-us-inner-div">
@@ -61,8 +61,8 @@ class Contact extends Component {
                                 <div className="number">
                                     <div>
                                         <p>
-                                            <a href="tel:+94770895420">
-                                                (+94) 77 089 5420
+                                            <a href="tel:+94771234567">
+                                                (+94) 77 1234 567
                                             </a>
                                         </p>
                                     </div>
@@ -77,8 +77,8 @@ class Contact extends Component {
                                 <div className="email">
                                     <div>
                                         <p>
-                                            <a href="mailto:sangeethasanthiralingam@gmail.com">
-                                                sangeethasanthiralingam@gmail.com
+                                            <a href="mailto:jetparkbooking@gmail.com">
+                                                jetparkbooking@gmail.com
                                             </a>
                                         </p>
                                     </div>
@@ -92,9 +92,8 @@ class Contact extends Component {
                                 </div>
                                 <div className="location">
                                     <div>
-                                        <p>  Apptimus  ,</p>
-                                        <p>No 45,Jaffna-Kankesanturai Rd,</p>
-                                        <p>Chunnakam 40000,</p>
+                                        <p> Jet Park</p>
+                                        <p>Palaly </p>
                                         <p>Jaffna.</p>
                                     </div>
                                 </div>
@@ -140,7 +139,7 @@ class Contact extends Component {
                                 </label>
                                 <label className="labelStyle" htmlFor="Message ">
                                     Message:
-                                    <input type="textarea" className="inputStyle "
+                                    <textarea type="textarea" className="inputStyle "
                                         value={this.state.Message}
                                         onChange={(e) => this.handleChange(e, "Message")}
                                     />

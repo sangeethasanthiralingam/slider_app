@@ -1,0 +1,168 @@
+.container {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.logo-name,
+.nav-header {
+    margin: 0;
+}
+
+.logo-name {
+    font-size: 36px;
+    padding: 20px 20px 20px 30px;
+    color: crimson;
+}
+
+.nav-bar {
+    border: 1px solid aliceblue;
+    background-color: aliceblue;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+.nav-header {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 400px;
+}
+
+.nav-header li {
+    display: inline;
+}
+
+.nav-header a {
+    text-decoration: none;
+    color: rgb(126, 10, 10);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-header a:hover {
+    background-color: #dddcdc;
+}
+
+.login {
+    color: rgb(255, 255, 255);
+    background-color: rgb(191, 160, 249);
+    font-weight: bold;
+    font-size: 24px;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid rgb(191, 160, 249);
+    margin-left: 20px;
+    height: fit-content;
+}
+
+.login a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.login a:hover {
+    background-color: none;
+}
+
+.book-now{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 160, 196);
+    font-weight: bold;
+    font-size: 24px;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 160, 196);
+    margin-left: 20px;
+    height: fit-content;
+}
+
+.book-now a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.book-now a:hover {
+    background-color: none;
+}
+
+.slider_container {
+    display: flex;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+
+.image-with-text {
+    position: relative;
+}
+
+.text-content {
+    position: absolute;
+    top: 80%;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    width: 1370px;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+    padding: 10px;
+    margin: 0;
+}
+
+.left-arrow {
+    width: 20px;
+    height: 20px;
+    padding: 350px 10px 0 10px;
+}
+
+.right-arrow {
+    width: 20px;
+    height: 20px;
+    padding: 350px 10px 0 10px;
+}
+
+img {
+    width: 100%;
+    height: 78vh;
+}
+
+.footer {
+    background-color: lightgray;
+    padding-left: 50px;
+    padding-right: 60px;
+    padding-top: 10px;
+    font-size: 18px;
+    height: 60px;
+    text-align: center;
+}
+
+.copyright {
+    height: 25px;
+    text-align: center;
+    background-color: rgb(175, 175, 175);
+    padding: 10px;
+    font-size: 24px;
+    margin: 0;
+}
+
+.footer-links ul {
+    padding-left: 30px;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: blue;
+}

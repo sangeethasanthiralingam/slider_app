@@ -1,0 +1,70 @@
+.container {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: rgb(226, 224, 224);
+
+}
+
+.about-header{
+    text-align: center;
+    font-size: 40px;
+    color: #31c9a0;
+}
+
+.about-container{
+    background-color: azure;
+    width: fit-content;
+    margin: 15px;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#who-we-are , #what-sets-us-apart , #our-commitment{
+    text-align: center;
+    color: brown;
+}
+
+#who-we-are p{
+    text-align: center;
+    background-color: azure;
+    color: black;
+    width: fit-content;
+    padding: 20px;
+    margin: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#what-sets-us-apart ul{
+    text-align: center;
+    background-color: azure;
+    color: black;
+    width: 1400px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#what-sets-us-apart li{
+    list-style: none;
+}
+
+#our-commitment p{
+    text-align: center;
+    background-color: azure;
+    color: black;
+    width: fit-content;
+    padding: 20px;
+    margin: 15px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
