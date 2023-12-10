@@ -10,6 +10,7 @@ import Login from './components/Login';
 import About from './components/About';
 import Service from './components/Service';
 import Booknow from './components/Booknow';
+import ForgotPassword from './components/ForgotPassword';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
       <Route path='/about' element={<About/>} />
       <Route path='/login' element={<Login/>} />
       <Route path='/booknow' element={<Booknow/>} />
+      <Route path='/forgotPassword' element={<ForgotPassword/>} />
     </Routes>
   </Router>
 );
