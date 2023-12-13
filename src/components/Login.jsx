@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import person from '../img/person.png';
 import emailimg from '../img/emailimg.png';
 import passwordimg from '../img/passwordimg.png';
+import conpass from '../img/conpass.png';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
@@ -11,34 +13,50 @@ const Login = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [conpassword, setConPassword] = useState('');
 
     const submitForm = (event) => {
         
         event.preventDefault();
 
         if (action === 'Sign Up') {
-            const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-            const isEmailRegistered = existingUsers.some((user) => user.email === email);
+            if(name !== '' && email !=='' && password !=='' && conpassword !=='')
+            {
+                if(password === conpassword)
+                {
+                    const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-            if (!isEmailRegistered) {
-                const user = {
-                    name: name,
-                    email: email,
-                    password: password,
-                };
+                    const isEmailRegistered = existingUsers.some((user) => user.email === email);
 
-                existingUsers.push(user);
+                    if (!isEmailRegistered) {
+                        const user = {
+                            name: name,
+                            email: email,
+                            password: password,
+                            conpassword :conpassword
+                        };
 
-                localStorage.setItem('users', JSON.stringify(existingUsers));
+                        existingUsers.push(user);
 
-                alert('User registered:', user);
+                        localStorage.setItem('users', JSON.stringify(existingUsers));
 
-                setName('');
-                setEmail('');
-                setPassword('');
-            } else {
-                alert('Email is already registered');
+                        alert('User registered:', user);
+
+                        setName('');
+                        setEmail('');
+                        setPassword('');
+                        setConPassword('');
+                    } else {
+                        alert('Email is already registered');
+                    }
+                }
+                else{
+                    alert("Password doesnot matching");
+                }
+            }
+            else{
+                alert('Please fill all the fields');
             }
         }
         else{
@@ -89,14 +107,22 @@ const Login = () => {
 
                         <div className="input1">
                             <img src={emailimg} alt="" />
-                            <input type="email" placeholder="Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input type="email" placeholder="Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                         </div>
                         <div className="input1">
                             <img src={passwordimg} alt="" />
-                            <input type="Password" name="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <input type="Password" name="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                         </div>
+                        {action === 'Login' ? (
+                            <div></div>
+                        ) : (
+                            <div className="input1">
+                            <img src={conpass} alt="" />
+                            <input type="Password" name="conpassword" placeholder="confirm password" value={conpassword} onChange={(e) => setConPassword(e.target.value)}/>
+                            </div>
+                        )}
                     </div>
-                    {action === 'Sign Up' ? <div></div> : <div className="forgot-password1"> Forgot Password? <span>Click Here</span> </div>}
+                    {action === 'Sign Up' ? <div></div> : <div className="forgot-password1"> Forgot Password? <Link to='/forgotPassword'><span>Click Here</span></Link> </div>}
 
                     <div className="submit-container1">
                         <button className="btnsubmit"> {action === 'Sign Up' ? 'Sign Up' : 'Login'} </button>
