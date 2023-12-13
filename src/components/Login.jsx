@@ -64,12 +64,13 @@ const Login = () => {
             const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
             const user = existingUsers.find((user) => user.email === email && user.password === password);
-
+            
             if (user) {
                 alert('Login successful:');
                 setName('');
                 setEmail('');
                 setPassword('');
+                
             }
             else{
                 alert('Password is not matching');
@@ -79,8 +80,8 @@ const Login = () => {
 
     return (
         <div>
+        <Navbar/>
         <div className="body1">
-            <Navbar/>
             <div className="container1">
                 <div className="header1">
                     <div className="text1"> {action} </div>
