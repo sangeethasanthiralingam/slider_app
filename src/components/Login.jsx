@@ -107,11 +107,11 @@ const Login = () => {
 
                         <div className="input1">
                             <img src={emailimg} alt="" />
-                            <input type="email" placeholder="Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                            <input type="email" placeholder="Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
                         </div>
                         <div className="input1">
                             <img src={passwordimg} alt="" />
-                            <input type="Password" name="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                            <input type="Password" name="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                         </div>
                         {action === 'Login' ? (
                             <div></div>
