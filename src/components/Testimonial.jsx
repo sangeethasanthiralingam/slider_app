@@ -57,7 +57,6 @@ class Testimonial extends Component {
                     'Using this parking service made my travel stress-free. The attendants were helpful, and the facility was well-maintained.',
                 image: 'https://randomuser.me/api/portraits/men/6.jpg',
             },
-            // Add more testimonials as needed
         ];
 
 

@@ -4,7 +4,7 @@ import { faPhone, faEnvelope, faMapMarker } from '@fortawesome/free-solid-svg-ic
 import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
+import './../style/Style.css';
 class Contact extends Component {
     constructor() {
         super();
